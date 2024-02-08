@@ -9,10 +9,9 @@ st.title('SISTEM PREDIKSI KELUARGA BERESIKO STUNTING')
 
 # fUNGSI PREDIKSI
 def predict(input_data):
-        prediction = model.predict([input_data])[0]
+    prediction = model.predict([input_data])[0]
     return prediction
 
-#STREAMLIT APP
 def main():
     st.title("Aplikasi Prediksi Stunting Keluarga")
 
