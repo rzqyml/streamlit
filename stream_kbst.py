@@ -1,13 +1,21 @@
 import streamlit as st
+
+# Pasang paket yang diperlukan
+st.sidebar.text("Menginstal paket yang diperlukan...")
+st.sidebar.text("Ini mungkin memerlukan waktu beberapa menit.")
+
+# Instal joblib
+st.sidebar.code("!pip install joblib")
+!pip install joblib
+
+# Lanjutkan dengan skrip Anda
 import joblib
 
-# Load the Naive Bayes model
-model = joblib.load(open('kbst_model.sav', 'rb'))
+# Muat model Naive Bayes
+model = joblib.load('kbst_model.sav')
 
-# Function to make predictions
+# Fungsi untuk membuat prediksi
 def predict(input_data):
-    # Placeholder for the actual prediction logic based on your model
-    # Modify this part according to your model's input requirements
     prediction = model.predict([input_data])[0]
     return prediction
 
