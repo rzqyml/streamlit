@@ -1,10 +1,8 @@
 import streamlit as st
 
-# Pasang paket yang diperlukan
+# Instal joblib
 st.sidebar.text("Menginstal paket yang diperlukan...")
 st.sidebar.text("Ini mungkin memerlukan waktu beberapa menit.")
-
-# Instal joblib
 st.sidebar.code("!pip install joblib")
 !pip install joblib
 
