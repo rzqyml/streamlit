@@ -1,8 +1,8 @@
 import streamlit as st
-import pickle
+import joblib
 
 # Load the Naive Bayes model
-model = pickle.load(open('kbst_model.sav', 'rb'))
+model = joblib.load(open('kbst_model.sav', 'rb'))
 
 # Function to make predictions
 def predict(input_data):
