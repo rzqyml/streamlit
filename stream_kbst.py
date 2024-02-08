@@ -1,17 +1,18 @@
-import joblib
+import pickle
 import streamlit as st
 
 # MEMBACA MODEL
-model = joblib.load(open('kbst_model.sav', 'rb'))
+model = pickle.load(open('kbst_model.sav', 'rb'))
 
 #TITLE WEB
 st.title('SISTEM PREDIKSI KELUARGA BERESIKO STUNTING')
 
 # fUNGSI PREDIKSI
 def predict(input_data):
-    prediction = model.predict([input_data])[0]
-    return prediction
+        prediction = model.predict([input_data])[0]
+    #return prediction
 
+#STREAMLIT APP
 def main():
     st.title("Aplikasi Prediksi Stunting Keluarga")
 
