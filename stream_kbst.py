@@ -1,8 +1,8 @@
-import joblib
+import pickle
 import streamlit as st
 
 # MEMBACA MODEL
-model = joblib.load(open('kbst_model.sav', 'rb'))
+model = pickle.load(open('kbst_model.sav', 'rb'))
 
 #TITLE WEB
 st.title('SISTEM PREDIKSI KELUARGA BERESIKO STUNTING')
